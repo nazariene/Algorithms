@@ -1,10 +1,12 @@
+package model;
+
 import edu.princeton.cs.algs4.In;
 
 import java.io.File;
 import java.util.Stack;
 
 /**
- * Non-recursive impl of DFS
+ * Non-recursive impl of model.DFS
  */
 public class NonRecursiveDFS extends DFS {
 
@@ -31,7 +33,7 @@ public class NonRecursiveDFS extends DFS {
     }
 
     public static void main(String[] args) {
-        Graph graph = new AdjListGraphImpl(new In(new File("C:\\work\\SandBox\\Algo_playground\\Graph\\src\\main\\resources\\tinyGraph")));
+        Graph graph = new AdjListGraphImpl(new In(new File("C:\\work\\SandBox\\Algo_playground\\model.Graph\\src\\main\\resources\\tinyGraph")));
         System.out.println(graph);
 
         DFS dfs = new NonRecursiveDFS(graph, 1);

@@ -1,3 +1,5 @@
+package model;
+
 import edu.princeton.cs.algs4.Bag;
 import edu.princeton.cs.algs4.In;
 
@@ -17,20 +19,20 @@ public class AdjListGraphImpl implements Graph {
     public AdjListGraphImpl(In in) {
         try {
             this.V = in.readInt();
-            if (V < 0) throw new IllegalArgumentException("number of vertices in a Graph must be nonnegative");
+            if (V < 0) throw new IllegalArgumentException("number of vertices in a model.Graph must be nonnegative");
             adjacencyList = (Bag<Integer>[]) new Bag[V];
             for (int v = 0; v < V; v++) {
                 adjacencyList[v] = new Bag<Integer>();
             }
             int E = in.readInt();
-            if (E < 0) throw new IllegalArgumentException("number of edges in a Graph must be nonnegative");
+            if (E < 0) throw new IllegalArgumentException("number of edges in a model.Graph must be nonnegative");
             for (int i = 0; i < E; i++) {
                 int v = in.readInt();
                 int w = in.readInt();
                 addEdge(v, w);
             }
         } catch (NoSuchElementException e) {
-            throw new IllegalArgumentException("invalid input format in Graph constructor", e);
+            throw new IllegalArgumentException("invalid input format in model.Graph constructor", e);
         }
     }
 
