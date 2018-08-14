@@ -9,7 +9,7 @@
  * In place: yes
  * Extra space: 1
  */
-public class InsertionSort extends AbstractSort {
+public class InsertionSort implements ISort {
     public void sort(Comparable[] inputArray) {
         for (int i = 0; i < inputArray.length; i++) {
             for (int j = i; j > 0 && inputArray[j].compareTo(inputArray[j-1]) < 0; j--) {

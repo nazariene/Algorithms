@@ -10,7 +10,7 @@
  * In place: yes
  * Extra space: lgN
  */
-public class ThreeWayQuickSort extends AbstractSort {
+public class ThreeWayQuickSort implements ISort {
     public void sort(Comparable[] inputArray) {
         innerSort(inputArray, 0, inputArray.length - 1);
     }

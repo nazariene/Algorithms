@@ -4,7 +4,7 @@
  * In place: yes
  * Extra space: 1
  */
-public class ShellSort extends AbstractSort {
+public class ShellSort implements ISort {
     public void sort(Comparable[] inputArray) {
         int N = inputArray.length;
         int h = 1;

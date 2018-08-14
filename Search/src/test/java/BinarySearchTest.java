@@ -3,7 +3,7 @@ import org.junit.Test;
 
 public class BinarySearchTest {
 
-    private IBinarySearch binarySearch = new BinarySearch();
+    private IBinarySearch binarySearch = new TestImpl();
 
     @Test
     public void testSearchForMiddleElementInOddArray() {

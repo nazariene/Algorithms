@@ -9,7 +9,7 @@
  * In place: yes
  * Extra space: 1
  */
-public class SelectionSort extends AbstractSort {
+public class SelectionSort implements ISort {
 
     public void sort(Comparable[] inputArray) {
 

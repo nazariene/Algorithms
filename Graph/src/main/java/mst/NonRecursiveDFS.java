@@ -1,12 +1,14 @@
-package model;
+package mst;
 
 import edu.princeton.cs.algs4.In;
+import model.AdjListGraphImpl;
+import model.Graph;
 
 import java.io.File;
 import java.util.Stack;
 
 /**
- * Non-recursive impl of model.DFS
+ * Non-recursive impl of mst.DFS
  */
 public class NonRecursiveDFS extends DFS {
 

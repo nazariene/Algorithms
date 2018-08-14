@@ -4,7 +4,7 @@
  *
  * Cons - large memory footprint (for temp arrays)
  */
-public class ImprovedMergeSort extends AbstractSort {
+public class ImprovedMergeSort implements ISort {
 
     private static int CUTOFF = 3;
 

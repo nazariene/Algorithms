@@ -13,7 +13,7 @@
  * In place: no
  * Extra space: N
  */
-public class MergeSort extends AbstractSort {
+public class MergeSort implements ISort {
 
     public void sort(Comparable[] input) {
         Comparable[] temp = new Comparable[input.length];

@@ -1,7 +1,7 @@
 /**
  * Sort w/o recursion
  */
-public class BottomUpMergeSort extends AbstractSort {
+public class BottomUpMergeSort implements ISort {
 
     public void sort(Comparable[] inputArray) {
         int n = inputArray.length;

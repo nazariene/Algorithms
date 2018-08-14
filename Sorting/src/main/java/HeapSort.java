@@ -7,7 +7,7 @@
  * Heap-ordered tree is binary tree that maintain condition: parent is > each children
  * if array[k] is parent, then array[2*k] and array[2*k+1] are children
  */
-public class HeapSort extends AbstractSort {
+public class HeapSort implements ISort {
     public void sort(Comparable[] inputArray) {
         int n = inputArray.length;
 

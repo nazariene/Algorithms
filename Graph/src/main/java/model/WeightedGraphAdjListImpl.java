@@ -11,8 +11,8 @@ public class WeightedGraphAdjListImpl implements WeightedGraph {
     private static final String NEWLINE = System.getProperty("line.separator");
 
     protected final int V;
-    protected int E;
-    protected Bag<Edge>[] adjacencyList;
+    int E;
+    Bag<Edge>[] adjacencyList;
 
     public WeightedGraphAdjListImpl(int V) {
         this.V = V;
@@ -34,7 +34,6 @@ public class WeightedGraphAdjListImpl implements WeightedGraph {
             }
             int E = in.readInt();
             if (E < 0) throw new IllegalArgumentException("number of edges in a model.Graph must be nonnegative");
-            Edge edge;
             for (int i = 0; i < E; i++) {
                 int from = in.readInt();
                 int to = in.readInt();

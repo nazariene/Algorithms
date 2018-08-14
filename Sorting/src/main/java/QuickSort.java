@@ -9,7 +9,7 @@
  * In place: yes
  * Extra space: lgN
  */
-public class QuickSort extends AbstractSort {
+public class QuickSort implements ISort {
     public void sort(Comparable[] inputArray) {
         innerSort(inputArray, 0, inputArray.length-1);
 

@@ -1,4 +1,4 @@
-public class BST<Key extends Comparable<Key>, Value>  {
+public class BST<Key extends Comparable<Key>, Value> implements IBST<Key, Value> {
 
     Node root;
 
