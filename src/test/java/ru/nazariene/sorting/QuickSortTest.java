@@ -13,4 +13,9 @@ public class QuickSortTest extends SortTest {
     public void testThreeWayQuickSort() {
         runTests(new ThreeWayQuickSort());
     }
+
+    @Test
+    public void testQuickSortForLoop() {
+        runTests(new QuickSortForLoop());
+    }
 }

@@ -26,11 +26,11 @@ public class ThreeWayQuickSort implements ISort {
         int lt = lo;
         int i = lo + 1;
         int gt = hi;
-        int elem = input[lo];
+        int partition = input[lo];
         while (i <= gt) {
-            if (input[i] < elem) {
+            if (input[i] < partition) {
                 exchange(input, lt++, i++);
-            } else if (input[i] > elem) {
+            } else if (input[i] > partition) {
                 exchange(input, i, gt--);
             } else {
                 i++;
