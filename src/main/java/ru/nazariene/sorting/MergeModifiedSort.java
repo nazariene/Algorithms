@@ -20,7 +20,12 @@ public class MergeModifiedSort implements ISort {
     }
 
     private void merge(int[] inputArray, int lo, int mid, int hi) {
+        //+1 here because mid,lo,hi are index based (i.e. start with 0)
+        //and size is value-based (start with 1).
+        //So, need extra 1 here.
         int leftSize = mid - lo + 1;
+        //Do not add 1 to rightSize, cause while hi and mid are index based
+        //They are > 0
         int rightSize = hi - mid;
 
         int[] left = new int[leftSize];
@@ -30,12 +35,16 @@ public class MergeModifiedSort implements ISort {
             left[i] = inputArray[lo + i];
         }
         for (int i = 0; i < rightSize; i++) {
+            //arr[mid] goes to left side
+            //So, start with mid + 1
             right[i] = inputArray[mid + i + 1];
         }
 
         int i = 0;
         int j = 0;
         for (int k = lo; k <= hi; k ++) {
+            //>= cause i is index-based, and leftSize is value-based.
+            //So need to consider i = leftSize as out of bounds case
             if (i >= leftSize) {
                 inputArray[k] = right[j++];
             }

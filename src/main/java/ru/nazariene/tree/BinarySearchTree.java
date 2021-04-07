@@ -73,6 +73,8 @@ public class BinarySearchTree {
             return current;
         }
 
+        //We must delete current node
+        //Check if it has children
         if (current.left == null) {
             return current.right;
         }

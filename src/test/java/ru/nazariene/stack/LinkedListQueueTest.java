@@ -3,21 +3,11 @@ package ru.nazariene.stack;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class QueueTest {
+public class LinkedListQueueTest {
 
     @Test
-    public void testLinkedListQueue() {
+    public void testqueue_Regular() {
         Queue queue = new LinkedListQueue();
-        runTests(queue);
-    }
-
-    private void runTests(Queue queue) {
-        testqueue_Regular(queue);
-        testqueue_popWhenEmpty(queue);
-        testqueue_EnsureCapacity(queue);
-    }
-
-    private void testqueue_Regular(Queue queue) {
         queue.enqueue(1);
         int result = queue.dequeue();
         Assert.assertEquals(1, result);
@@ -34,7 +24,10 @@ public class QueueTest {
         Assert.assertTrue(queue.isEmpty());
     }
 
-    private void testqueue_popWhenEmpty(Queue queue) {
+    @Test
+    public void testqueue_popWhenEmpty() {
+        Queue queue = new LinkedListQueue();
+
         try {
             queue.dequeue();
             Assert.fail();
@@ -43,7 +36,10 @@ public class QueueTest {
         }
     }
 
-    private void testqueue_EnsureCapacity(Queue queue) {
+    @Test
+    public void testqueue_EnsureCapacity() {
+        Queue queue = new LinkedListQueue();
+
         for (int i = 0; i < 15; i++) {
             queue.enqueue(i);
         }

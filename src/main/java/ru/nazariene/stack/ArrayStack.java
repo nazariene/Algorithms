@@ -35,7 +35,7 @@ public class ArrayStack implements Stack {
         if (size == 0) {
             throw new IllegalArgumentException("Stack is empty!");
         }
-        return arr[size];
+        return arr[size - 1];
     }
 
     @Override
