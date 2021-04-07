@@ -2,7 +2,7 @@ package ru.nazariene.sorting;
 
 interface ISort {
 
-    void sort(int[] inputArray);
+    void sort(int[] arr);
 
     default void exchange(int[] inputArray, int i, int curMin) {
         int curMinValue = inputArray[curMin];

@@ -13,17 +13,17 @@ package ru.nazariene.sorting;
  */
 public class SelectionSort implements ISort {
 
-    public void sort(int[] inputArray) {
+    public void sort(int[] arr) {
 
-        for (int i = 0; i < inputArray.length; i++) {
+        for (int i = 0; i < arr.length; i++) {
             int curMin = i;
-            for (int j = i + 1; j < inputArray.length; j++) {
-                if (inputArray[j] < inputArray[curMin]) {
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[j] < arr[curMin]) {
                     curMin = j;
                 }
             }
 
-            exchange(inputArray, i, curMin);
+            exchange(arr, i, curMin);
         }
     }
 }

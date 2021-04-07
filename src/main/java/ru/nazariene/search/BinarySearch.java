@@ -1,8 +1,8 @@
 package ru.nazariene.search;
 
-public class BinarySearch implements IBinarySearch {
+public class BinarySearch implements Search {
 
-    public int binarySearch(int[] inputArray, int searchFor) {
+    public int search(int[] inputArray, int searchFor) {
         int result = -1;
 
         int hi = inputArray.length - 1;

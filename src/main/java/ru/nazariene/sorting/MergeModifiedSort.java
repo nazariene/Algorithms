@@ -3,10 +3,10 @@ package ru.nazariene.sorting;
 public class MergeModifiedSort implements ISort {
 
     @Override
-    public void sort(int[] inputArray) {
+    public void sort(int[] arr) {
         //Merge sort - improvisation
 
-        innerSort(inputArray, 0, inputArray.length - 1);
+        innerSort(arr, 0, arr.length - 1);
     }
 
     private void innerSort(int[] inputArray, int lo, int hi) {

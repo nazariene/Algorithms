@@ -7,8 +7,8 @@ package ru.nazariene.sorting;
  * Extra space: 1
  */
 public class ShellSort implements ISort {
-    public void sort(int[] inputArray) {
-        int N = inputArray.length;
+    public void sort(int[] arr) {
+        int N = arr.length;
         int h = 1;
 
         while (h < N / 3) {
@@ -17,8 +17,8 @@ public class ShellSort implements ISort {
 
         while (h >= 1) {
             for (int i = h; i < N; i++) {
-                for (int j = i; j >= h && inputArray[j] < inputArray[j-h]; j -= h) {
-                    exchange(inputArray, j, j - h);
+                for (int j = i; j >= h && arr[j] < arr[j-h]; j -= h) {
+                    exchange(arr, j, j - h);
                 }
             }
             h = h / 3;

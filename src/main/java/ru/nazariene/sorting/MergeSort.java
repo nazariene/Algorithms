@@ -17,10 +17,10 @@ package ru.nazariene.sorting;
  */
 public class MergeSort implements ISort {
 
-    public void sort(int[] input) {
-        int[] temp = new int[input.length];
+    public void sort(int[] arr) {
+        int[] temp = new int[arr.length];
 
-        innerSort(input, temp, 0, input.length - 1);
+        innerSort(arr, temp, 0, arr.length - 1);
     }
 
     private void innerSort(int[] input, int[] temp, int lo, int hi) {

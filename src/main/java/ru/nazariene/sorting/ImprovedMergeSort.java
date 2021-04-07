@@ -10,10 +10,10 @@ public class ImprovedMergeSort implements ISort {
 
     private static int CUTOFF = 3;
 
-    public void sort(int[] input) {
-        int[] temp = new int[input.length];
+    public void sort(int[] arr) {
+        int[] temp = new int[arr.length];
 
-        innerSort(input, temp, 0, input.length - 1);
+        innerSort(arr, temp, 0, arr.length - 1);
     }
 
     private void innerSort(int[] input, int[] temp, int lo, int hi) {

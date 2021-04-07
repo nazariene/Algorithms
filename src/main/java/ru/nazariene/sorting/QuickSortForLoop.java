@@ -3,8 +3,8 @@ package ru.nazariene.sorting;
 public class QuickSortForLoop implements ISort{
 
     @Override
-    public void sort(int[] inputArray) {
-        innerSort(inputArray, 0, inputArray.length - 1);
+    public void sort(int[] arr) {
+        innerSort(arr, 0, arr.length - 1);
     }
 
     private void innerSort(int[] inputArray, int lo, int hi) {

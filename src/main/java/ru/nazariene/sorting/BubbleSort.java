@@ -12,12 +12,12 @@ package ru.nazariene.sorting;
 public class BubbleSort implements ISort {
 
     @Override
-    public void sort(int[] inputArray) {
-        for (int i = 0; i < inputArray.length; i++) {
+    public void sort(int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
             boolean swapped = false;
-            for (int j = inputArray.length -1; j > i; j--) {
-                if (inputArray[j] < inputArray[j-1]) {
-                    exchange(inputArray, j, j-1);
+            for (int j = arr.length -1; j > i; j--) {
+                if (arr[j] < arr[j-1]) {
+                    exchange(arr, j, j-1);
                     swapped = true;
                 }
             }

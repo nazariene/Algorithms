@@ -12,8 +12,8 @@ package ru.nazariene.sorting;
  * Extra space: lgN
  */
 public class QuickSort implements ISort {
-    public void sort(int[] inputArray) {
-        innerSort(inputArray, 0, inputArray.length-1);
+    public void sort(int[] arr) {
+        innerSort(arr, 0, arr.length-1);
 
     }
 

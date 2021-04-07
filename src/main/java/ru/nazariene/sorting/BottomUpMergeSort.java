@@ -5,8 +5,8 @@ package ru.nazariene.sorting;
  */
 public class BottomUpMergeSort implements ISort {
 
-    public void sort(int[] inputArray) {
-        int n = inputArray.length;
+    public void sort(int[] arr) {
+        int n = arr.length;
         int[] aux = new int[n];
         //Set up width of a sub-array we are going to sort
         //And double it - i.e. sort small sub-arrays of 2 elements, than 4, than 8...
@@ -14,10 +14,10 @@ public class BottomUpMergeSort implements ISort {
             for (int lo = 0; lo < n - len; lo += len + len) {
                 int mid = lo + len - 1;
                 int hi = Math.min(lo + len * 2 - 1, n - 1);
-                for (int k = 0; k < inputArray.length; k++) {
-                    aux[k] = inputArray[k];
+                for (int k = 0; k < arr.length; k++) {
+                    aux[k] = arr[k];
                 }
-                merge(inputArray, aux, lo, mid, hi);
+                merge(arr, aux, lo, mid, hi);
             }
         }
     }

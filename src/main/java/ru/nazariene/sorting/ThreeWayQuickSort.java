@@ -13,8 +13,8 @@ package ru.nazariene.sorting;
  * Extra space: lgN
  */
 public class ThreeWayQuickSort implements ISort {
-    public void sort(int[] inputArray) {
-        innerSort(inputArray, 0, inputArray.length - 1);
+    public void sort(int[] arr) {
+        innerSort(arr, 0, arr.length - 1);
     }
 
     private void innerSort(int[] input, int lo, int hi) {

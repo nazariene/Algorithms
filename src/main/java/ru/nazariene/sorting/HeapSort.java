@@ -10,15 +10,15 @@ package ru.nazariene.sorting;
  * if array[k] is parent, then array[2*k] and array[2*k+1] are children
  */
 public class HeapSort implements ISort {
-    public void sort(int[] inputArray) {
-        int n = inputArray.length;
+    public void sort(int[] arr) {
+        int n = arr.length;
 
 
         for (int k = n / 2; k >= 0; k--)
-            sink(inputArray, k, n);
+            sink(arr, k, n);
         while (n > 0) {
-            exchange(inputArray, 0, --n);
-            sink(inputArray, 0, n);
+            exchange(arr, 0, --n);
+            sink(arr, 0, n);
         }
     }
 

@@ -12,10 +12,10 @@ package ru.nazariene.sorting;
  * Extra space: 1
  */
 public class InsertionSort implements ISort {
-    public void sort(int[] inputArray) {
-        for (int i = 0; i < inputArray.length; i++) {
-            for (int j = i; j > 0 && inputArray[j] < inputArray[j-1]; j--) {
-                exchange(inputArray, j, j-1);
+    public void sort(int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = i; j > 0 && arr[j] < arr[j-1]; j--) {
+                exchange(arr, j, j-1);
             }
         }
     }
