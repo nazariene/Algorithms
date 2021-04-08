@@ -9,7 +9,7 @@ package ru.nazariene.sorting;
  * In place: yes
  * Extra space: 1
  */
-public class BubbleSort implements ISort {
+public class BubbleSort implements Sort {
 
     @Override
     public void sort(int[] arr) {

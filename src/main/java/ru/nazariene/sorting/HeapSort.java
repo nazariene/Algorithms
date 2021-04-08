@@ -9,7 +9,7 @@ package ru.nazariene.sorting;
  * Heap-ordered tree is binary tree that maintain condition: parent is > each children
  * if array[k] is parent, then array[2*k] and array[2*k+1] are children
  */
-public class HeapSort implements ISort {
+public class HeapSort implements Sort {
     public void sort(int[] arr) {
         int n = arr.length;
 

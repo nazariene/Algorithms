@@ -1,4 +1,4 @@
-package ru.nazariene;
+package ru.nazariene.tree;
 
 import org.junit.Assert;
 import org.junit.Test;

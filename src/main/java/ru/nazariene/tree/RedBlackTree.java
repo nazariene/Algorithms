@@ -4,14 +4,14 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
 
-public class RedBlackTree {
+public class RedBlackTree implements Tree {
 
-    private static boolean BLACK = false;
-    private static boolean RED = true;
+    private static final boolean BLACK = false;
+    private static final boolean RED = true;
 
     private Node root;
 
-    private class Node {
+    private static class Node {
         public Node left;
         public Node right;
         public int value;
@@ -83,9 +83,9 @@ public class RedBlackTree {
     }
 
     private void flipColors(Node node) {
-        node.left.color = BLACK;
-        node.right.color = BLACK;
-        node.color = RED;
+        node.left.color = !node.left.color;
+        node.right.color = !node.right.color;
+        node.color = !node.color;
     }
 
     private boolean isRed(Node node) {

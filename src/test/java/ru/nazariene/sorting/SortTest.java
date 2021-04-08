@@ -4,7 +4,7 @@ import org.junit.Assert;
 
 abstract public class SortTest {
 
-    protected void runTests(ISort sort) {
+    protected void runTests(Sort sort) {
         testSort(sort);
         testSortWithSameElements(sort);
         testSortWithNegatives(sort);
@@ -12,7 +12,7 @@ abstract public class SortTest {
         testLargeUnEvenData(sort);
     }
 
-    protected void testSort(ISort sort) {
+    protected void testSort(Sort sort) {
         int[] array = {3,2,1};
         sort.sort(array);
         Assert.assertEquals("Should be 1", 1, array[0]);
@@ -20,7 +20,7 @@ abstract public class SortTest {
         Assert.assertEquals("Should be 3", 3, array[2]);
     }
 
-    protected void testSortWithSameElements(ISort sort) {
+    protected void testSortWithSameElements(Sort sort) {
         int[] array = {3,2,2,1};
         sort.sort(array);
         Assert.assertEquals("Should be 1", 1, array[0]);
@@ -29,7 +29,7 @@ abstract public class SortTest {
         Assert.assertEquals("Should be 3", 3, array[3]);
     }
 
-    protected void testSortWithNegatives(ISort sort) {
+    protected void testSortWithNegatives(Sort sort) {
         int[] array = {3,-2,2,1};
         sort.sort(array);
         Assert.assertEquals("Should be -2", -2, array[0]);
@@ -39,7 +39,7 @@ abstract public class SortTest {
     }
 
 
-    protected void testLargeEvenData(ISort sort) {
+    protected void testLargeEvenData(Sort sort) {
         int[] array = {3,2,1,5,7,9,10,15,11,4};
         sort.sort(array);
         Assert.assertEquals("Should be 1", 1, array[0]);
@@ -55,7 +55,7 @@ abstract public class SortTest {
 
     }
 
-    protected void testLargeUnEvenData(ISort sort) {
+    protected void testLargeUnEvenData(Sort sort) {
         int[] array = {3,2,1,5,7,9,10,15,4};
         sort.sort(array);
         Assert.assertEquals("Should be 1", 1, array[0]);

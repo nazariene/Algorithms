@@ -4,11 +4,11 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
 
-public class BinarySearchTree {
+public class BinarySearchTree implements Tree {
 
     private Node root;
 
-    private class Node {
+    private static class Node {
         public Node left;
         public Node right;
         public int value;

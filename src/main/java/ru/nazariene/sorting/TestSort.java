@@ -1,6 +1,6 @@
 package ru.nazariene.sorting;
 
-public class TestSort implements ISort {
+public class TestSort implements Sort {
 
     @Override
     public void sort(int[] arr) {

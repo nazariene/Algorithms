@@ -1,6 +1,6 @@
 package ru.nazariene.sorting;
 
-public class MergeModifiedSort implements ISort {
+public class MergeModifiedSort implements Sort {
 
     @Override
     public void sort(int[] arr) {

@@ -6,7 +6,7 @@ package ru.nazariene.sorting;
  * In place: yes
  * Extra space: 1
  */
-public class ShellSort implements ISort {
+public class ShellSort implements Sort {
     public void sort(int[] arr) {
         int N = arr.length;
         int h = 1;

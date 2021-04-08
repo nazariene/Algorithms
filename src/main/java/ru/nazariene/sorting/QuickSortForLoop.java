@@ -1,6 +1,6 @@
 package ru.nazariene.sorting;
 
-public class QuickSortForLoop implements ISort{
+public class QuickSortForLoop implements Sort {
 
     @Override
     public void sort(int[] arr) {

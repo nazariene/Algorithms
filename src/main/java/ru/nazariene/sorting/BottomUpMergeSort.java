@@ -3,7 +3,7 @@ package ru.nazariene.sorting;
 /**
  * Sort w/o recursion
  */
-public class BottomUpMergeSort implements ISort {
+public class BottomUpMergeSort implements Sort {
 
     public void sort(int[] arr) {
         int n = arr.length;

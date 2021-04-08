@@ -6,7 +6,7 @@ package ru.nazariene.sorting;
  *
  * Cons - large memory footprint (for temp arrays)
  */
-public class ImprovedMergeSort implements ISort {
+public class ImprovedMergeSort implements Sort {
 
     private static int CUTOFF = 3;
 

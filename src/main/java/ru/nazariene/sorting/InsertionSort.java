@@ -11,7 +11,7 @@ package ru.nazariene.sorting;
  * In place: yes
  * Extra space: 1
  */
-public class InsertionSort implements ISort {
+public class InsertionSort implements Sort {
     public void sort(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
             for (int j = i; j > 0 && arr[j] < arr[j-1]; j--) {

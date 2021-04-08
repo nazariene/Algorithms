@@ -1,6 +1,6 @@
 package ru.nazariene.sorting;
 
-interface ISort {
+interface Sort {
 
     void sort(int[] arr);
 

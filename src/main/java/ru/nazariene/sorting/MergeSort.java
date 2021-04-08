@@ -15,7 +15,7 @@ package ru.nazariene.sorting;
  * In place: no
  * Extra space: N
  */
-public class MergeSort implements ISort {
+public class MergeSort implements Sort {
 
     public void sort(int[] arr) {
         int[] temp = new int[arr.length];
