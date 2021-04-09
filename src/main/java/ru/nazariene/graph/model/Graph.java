@@ -1,14 +1,16 @@
 package ru.nazariene.graph.model;
 
+import java.util.List;
+
 public interface Graph {
 
-    int V();
+    int numVertices();
 
-    int E();
+    int numEdges();
 
-    void addEdge(int v, int w);
+    void addEdge(Edge edge);
 
-    Iterable<Integer> adjacentTo(int v);
+    List<Edge> edges(int vertex);
 
-    int degree(int v);
+    List<Edge> edges();
 }

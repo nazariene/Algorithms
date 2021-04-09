@@ -1,10 +1,10 @@
-package ru.nazariene.graph.mst;
+package ru.nazariene.graph.princeton.mst;
 
 import java.io.File;
 
 import edu.princeton.cs.algs4.In;
-import ru.nazariene.graph.model.AdjListGraphImpl;
-import ru.nazariene.graph.model.Graph;
+import ru.nazariene.graph.princeton.model_princeton.AdjListGraphImpl;
+import ru.nazariene.graph.princeton.model_princeton.Graph;
 
 
 /**

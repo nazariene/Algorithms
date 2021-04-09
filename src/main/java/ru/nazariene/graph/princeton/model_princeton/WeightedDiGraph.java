@@ -1,4 +1,4 @@
-package ru.nazariene.graph.model;
+package ru.nazariene.graph.princeton.model_princeton;
 
 import edu.princeton.cs.algs4.In;
 

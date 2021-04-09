@@ -1,4 +1,4 @@
-package ru.nazariene.graph.mst;
+package ru.nazariene.graph.princeton.mst;
 
 /**
  * Quick Find impl of union find

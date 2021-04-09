@@ -1,4 +1,4 @@
-package ru.nazariene.graph.model;
+package ru.nazariene.graph.princeton.model_princeton;
 
 import java.util.NoSuchElementException;
 

@@ -1,31 +1,33 @@
 package ru.nazariene.graph.model;
 
+import java.util.Objects;
+
 public class Edge {
 
-    private int fromVertex;
-    private int toVertex;
+    private int from;
+    private int to;
     private int weight;
 
-    public Edge(int fromVertex, int toVertex, int weight) {
-        this.fromVertex = fromVertex;
-        this.toVertex = toVertex;
+    public Edge(int from, int to, int weight) {
+        this.from = from;
+        this.to = to;
         this.weight = weight;
     }
 
-    public int getFromVertex() {
-        return fromVertex;
+    public int getFrom() {
+        return from;
     }
 
-    public void setFromVertex(int fromVertex) {
-        this.fromVertex = fromVertex;
+    public void setFrom(int from) {
+        this.from = from;
     }
 
-    public int getToVertex() {
-        return toVertex;
+    public int getTo() {
+        return to;
     }
 
-    public void setToVertex(int toVertex) {
-        this.toVertex = toVertex;
+    public void setTo(int to) {
+        this.to = to;
     }
 
     public int getWeight() {
@@ -37,23 +39,30 @@ public class Edge {
     }
 
     public Edge reverse() {
-        return new Edge(toVertex, fromVertex, weight);
+        return new Edge(to, from, weight);
     }
 
-    public int either() {
-        return fromVertex;
-    }
-
-    public int other(int v) {
-        if (v == fromVertex) {
-            return toVertex;
-        }
-        else {
-            return fromVertex;
-        }
-    }
-
+    @Override
     public String toString() {
-        return "from: " + fromVertex + ", to: " + toVertex + ", weight: " + weight;
+        return "Edge{" +
+                "from=" + from +
+                ", to=" + to +
+                ", weight=" + weight +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Edge edge = (Edge) o;
+        return from == edge.from &&
+                to == edge.to &&
+                weight == edge.weight;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(from, to, weight);
     }
 }

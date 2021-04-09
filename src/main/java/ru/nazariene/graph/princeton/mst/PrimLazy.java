@@ -1,4 +1,4 @@
-package ru.nazariene.graph.mst;
+package ru.nazariene.graph.princeton.mst;
 
 import java.io.File;
 import java.util.LinkedList;
@@ -6,7 +6,7 @@ import java.util.PriorityQueue;
 import java.util.Queue;
 
 import edu.princeton.cs.algs4.In;
-import ru.nazariene.graph.model.*;
+import ru.nazariene.graph.princeton.model_princeton.*;
 
 public class PrimLazy {
 

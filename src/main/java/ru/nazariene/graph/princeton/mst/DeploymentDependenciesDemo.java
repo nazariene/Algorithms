@@ -1,4 +1,4 @@
-package ru.nazariene.graph.mst;
+package ru.nazariene.graph.princeton.mst;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;

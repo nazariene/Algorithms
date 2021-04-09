@@ -1,45 +1,46 @@
-package ru.nazariene.graph.mst;
+package ru.nazariene.graph.princeton.mst;
 
 import java.io.File;
+import java.util.Comparator;
 import java.util.PriorityQueue;
+import java.util.Stack;
 
 import edu.princeton.cs.algs4.In;
-import edu.princeton.cs.algs4.Stack;
-import ru.nazariene.graph.model.Edge;
-import ru.nazariene.graph.model.WeightedDiGraph;
-import ru.nazariene.graph.model.WeightedGraph;
+import ru.nazariene.graph.princeton.model_princeton.Edge;
+import ru.nazariene.graph.princeton.model_princeton.WeightedDiGraph;
+import ru.nazariene.graph.princeton.model_princeton.WeightedGraph;
 
-public class Dijkstra {
+public class DijkstraTraining {
 
     private int[] distTo;
     private Edge[] edgeTo;
     private PriorityQueue<Integer> unVisitedNodes;
-    public Dijkstra(WeightedGraph graph, int source) {
 
-        unVisitedNodes = new PriorityQueue<>((o1, o2) -> Integer.compare(distTo[o1], distTo[o2]));
-
+    public DijkstraTraining(WeightedGraph graph, int source) {
         distTo = new int[graph.V()];
         edgeTo = new Edge[graph.V()];
+
+        unVisitedNodes = new PriorityQueue<>(Comparator.comparingInt(o -> distTo[o]));
+
         for (int i = 0; i < graph.V(); i++) {
             distTo[i] = Integer.MAX_VALUE;
             unVisitedNodes.add(i);
         }
+
         distTo[source] = 0;
 
-        while (unVisitedNodes.size() > 0) {
-            //Get lowest distance node from currently known (lowest distance is implemented by PriorityQueue with comparator)
-            int vertex = unVisitedNodes.poll();
-            System.out.println(vertex);
-            for (Edge e : graph.adjacentTo(vertex)) {
+        while (!unVisitedNodes.isEmpty()) {
+            Integer currentNode = unVisitedNodes.poll();
+            for (Edge e : graph.adjacentTo(currentNode)) {
                 relax(e);
             }
         }
     }
 
     private void relax(Edge e) {
+        int weight = e.getWeight();
         int from = e.getFromVertex();
         int to = e.getToVertex();
-        int weight = e.getWeight();
 
         if (distTo[to] > distTo[from] + weight) {
             distTo[to] = distTo[from] + weight;
@@ -47,28 +48,29 @@ public class Dijkstra {
         }
     }
 
-    public Iterable<Edge> pathTo(int target) {
-        if (!hasPathTo(target)) {
+
+    private Iterable<Edge> pathTo(int i) {
+        if (!hasPathTo(i)) {
             return null;
         }
-        Stack<Edge> path = new Stack<>();
-        for (Edge e = this.edgeTo[target]; e != null; e = this.edgeTo[e.getFromVertex()]) {
-            path.push(e);
+
+        Stack<Edge> edges = new Stack<>();
+        for (Edge e = edgeTo[i]; e != null; e = edgeTo[e.getFromVertex()]) {
+            edges.push(e);
         }
 
-        return path;
+        return edges;
     }
 
-    public boolean hasPathTo(int target) {
-        return distTo[target] < Integer.MAX_VALUE;
+    private boolean hasPathTo(int i) {
+        return distTo[i] < Integer.MAX_VALUE;
     }
 
     public static void main(String[] args) {
-        //See jpg in resources for visualization
         WeightedGraph graph = new WeightedDiGraph(new In(new File("C:\\work\\SandBox\\Algo_playground\\Graph\\src\\main\\resources\\tinyWeightedDiGraph")));
         System.out.println(graph);
 
-        Dijkstra dijkstra = new Dijkstra(graph, 0);
+        DijkstraTraining dijkstra = new DijkstraTraining(graph, 0);
 
 
         for (int i = 0; i < graph.V(); i++) {
