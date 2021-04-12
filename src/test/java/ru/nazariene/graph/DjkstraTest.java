@@ -6,7 +6,6 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import ru.nazariene.graph.model.Graph;
-import ru.nazariene.graph.model.UnweightedGraph;
 import ru.nazariene.graph.model.WeightedDirectionalGraph;
 
 public class DjkstraTest {

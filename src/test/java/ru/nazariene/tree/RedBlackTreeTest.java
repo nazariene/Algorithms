@@ -7,7 +7,7 @@ public class RedBlackTreeTest {
 
     @Test
     public void testAddAndBalance_9Elements() {
-        RedBlackTree rbt = new RedBlackTree();
+        Tree rbt = new RedBlackTree();
         rbt.add(1);
         rbt.add(2);
         rbt.add(3);

@@ -4,11 +4,13 @@ public class TestSort implements Sort {
 
     @Override
     public void sort(int[] arr) {
-        //Merge sort
-        //Uses divide and conquer paradigm and dynamic programming
-        //We split array in half until base case is reached.
-        //Base case - 1 element array.
-        //On our way back from recursion we merge 2 already sorted arrays
+        //Quicksort
+        //n*logn
+        //n^2 worst case
+        //stable
+        //inplace
+        //choose pivot element. Place all < pivot to left, all > to right
+        //Repeat for subarrays
 
         innerSort(arr, 0, arr.length - 1);
     }
@@ -18,7 +20,8 @@ public class TestSort implements Sort {
             return;
         }
 
-        int mid = lo + (hi - lo) / 2;
+        int mid = lo + (hi - lo)/2;
+
         innerSort(arr, lo, mid);
         innerSort(arr, mid + 1, hi);
 
@@ -26,33 +29,32 @@ public class TestSort implements Sort {
     }
 
     private void merge(int[] arr, int lo, int mid, int hi) {
-
         int leftSize = mid - lo + 1;
         int rightSize = hi - mid;
 
         int[] left = new int[leftSize];
         int[] right = new int[rightSize];
-
         for (int i = 0; i < leftSize; i++) {
             left[i] = arr[lo + i];
         }
         for (int i = 0; i < rightSize; i++) {
-            right[i] = arr[mid + i + 1];
+            right[i] = arr[mid + 1 + i];
         }
 
-        int i = 0;
-        int j = 0;
-        for (int k = lo; k <= hi ; k++) {
-            if (i >= leftSize) {
-                arr[k] = right[j++];
-            } else if (j >= rightSize) {
-                arr[k] = left[i++];
-            } else if (left[i] < right[j]) {
-                arr[k] = left[i++];
+        int l = 0;
+        int r = 0;
+        for (int i = lo; i <= hi; i++) {
+            if (l >= leftSize) {
+                arr[i] = right[r++];
+            } else if (r >= rightSize) {
+                arr[i] = left[l++];
+            } else if (left[l] < right[r]) {
+                arr[i] = left[l++];
             } else {
-                arr[k] = right[j++];
+                arr[i] = right[r++];
             }
         }
     }
+
 
 }
